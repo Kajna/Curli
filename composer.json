@@ -1,5 +1,15 @@
 {
     "name": "kajna/curli",
+    "description": "Object-Oriented interface for PHP cUrl extension",
+    "keywords": ["curl", "rest", "json", "xml"],
+    "authors": [
+        {
+            "name": "Milos Kajnaco",
+            "email": "milos@caenazzo.com"
+        }
+    ],
+    "license": "MIT",
+    "type": "library",
     "require": {
         "php": ">=5.4.0"
     },

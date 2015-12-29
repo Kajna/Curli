@@ -11,6 +11,12 @@ namespace Curli;
  */
 class Curli implements CurliInterface
 {
+
+	/**
+	 * Curly version
+	 */
+	const VERSION = '0.9.0';
+
 	/**
 	 * URI string
 	 *
