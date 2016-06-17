@@ -3,7 +3,7 @@ Curli
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](http://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-0.9.0-orange.svg)](https://packagist.org/packages/kajna/curli)
 
-Object-Oriented interface for PHP cUrl extension
+Lightweight library with object-oriented interface for sending HTTP requests
 
 ### Installing
 
@@ -42,7 +42,6 @@ try {
 	$json = json_encode($data);
 
 	$curli = (new \Curli\Curli())
-			->setTimeout(5)
 			->setConnectionTimeout(3)
 			->setHeader('Content-Type', 'application/json')
 			->setHeader('Content-Length', strlen($json))
@@ -57,7 +56,7 @@ try {
 	echo $e->getMessage();
 }
 ```
-### Sending and receiving XML data using POST with basic authentication
+### Sending and receiving XML data using POST
 
 ```php
 try {
@@ -65,7 +64,6 @@ try {
 
 	$curli = (new \Curli\Curli())
 			->setUserAgent('curl 7.16.1 (i386-portbld-freebsd6.2) libcurl/7.16.1 OpenSSL/0.9.7m zlib/1.2.3')
-			->setBasicAuthentication('username', 'password')
 			->setHeader('Content-Type', 'text/xml')
 			->setHeader('Content-Length', strlen($data))
 			->setParams($data)
